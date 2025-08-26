@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+
+* {
+ font-family: "Space Grotesk", sans-serif;
+  box-sizing: border-box;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  user-select: none;
+}
+
+.Intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  padding: 0;
+  display: block;
+  color: white;
+  text-align: center;
+  background-color: black;
+  font-size: 500%;
+  animation: IntroAnim 5s ease-in-out ;
+  opacity: 0;
+  z-index: -2;
+}
+.Intro > p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  animation: PIntroAnim 5s ease-in-out;
+  }
+
+  
+@keyframes IntroAnim {
+ 0%{opacity: 1;  z-index: 50;}
+ 70%{opacity: 1;}
+ 100%{opacity: 0; z-index: 50;}
+}
+@keyframes PIntroAnim {
+ 0%{opacity: 0;}
+ 20%{opacity: 1;}
+ 50%{opacity: 1;}
+ 80%{opacity: 0;}
+ 100%{opacity: 0;}
+}
+
+
+@keyframes Open-animation {
+  0%{
+    top: -200px;
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    top: 0px;
+    opacity: 1;
+  }
+}
+.Openanimation {
+  animation: Open-animation 0.5 ease-in-out;
+}
+
+@keyframes Closed-animation {
+  0%{
+    top: 0px;
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    
+    top: -650px;
+    opacity: 0;
+  }
+}
+.Closedanimation {
+  animation: Closed-animation 0.5 ease-in-out;
+}
+
+@keyframes showup {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+.showup {
+  animation: showup 0.5s ease-in-out;
+}
+@keyframes showdown {
+  from {opacity: 1;}
+  to {opacity: 0;}
+}
+.showdown {
+  animation: showdown 0.5s ease-in-out;
+}
+
+@keyframes caloscAnim {
+  0% {opacity: 0;}
+  40% {opacity: 0;}
+  55% {opacity: 1;}
+}
+.calosc {
+  color: white;
+  margin: auto;
+  background-color: black;
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  border: 2px groove rgb(44, 171, 86); /* POPRAWKA: określony kolor i styl */
+  padding: 20px; /* dodatkowe, żeby zawartość nie kleiła się do krawędzi */
+  animation: caloscAnim 10s ;
+  box-shadow: 0px 0px 20px rgb(44, 171, 86);
+}
+.tlo{
+  background-color: black;
+  position: relative;
+  z-index: 5;
+  padding: 5px /* dodatkowe, żeby zawartość nie kleiła się do krawędzi */
+}
+.przyciski {
+  margin: 1% auto;
+  text-align: center;
+  width: auto;
+  display: flex;
+  flex-wrap: wrap; /* na małych ekranach nie wyleci poza */
+}
+
+.przycisk_About_me, .przycisk_Modelling, .przycisk_Contact_me,.przycisk_Programming,.przycisk_Online_Shop {
+  padding: 0.5% 3%;
+  margin: 5px auto;
+  background-color: rgb(33, 105, 57);
+  width: auto; /* ZMIANA: zamiast 100%, lepiej auto */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+   z-index: 3;
+   border-radius: 15px;
+   border: 2px groove rgb(28, 153, 70);
+   box-shadow: 0px 0px 20px rgb(44, 171, 86);
+   position: relative;
+   transition: 0.5s;
+}
+.przycisk_About_me:hover,.przycisk_Modelling:hover,.przycisk_Contact_me:hover, .przycisk_Programming:hover,.przycisk_Online_Shop:hover{
+  background-color: white;
+  color: black;
+  animation: przyciski_hover 2s ease-in-out infinite;
+  transform: scale(1.2);
+}
+@keyframes przyciski_hover {
+  0%{filter: brightness(120%); }
+  50%{filter: brightness(160%); }
+  100%{filter: brightness(120%); }
+}
+
+@keyframes podswietlony_tekst{
+  0%{filter: brightness(100%);}
+  50%{filter: brightness(150%);}
+  100%{filter: brightness(100%);}
+}
+#About_Me {
+  text-align: center;
+  width: 80%;
+  margin: auto auto;
+  position: relative;
+  /* 
+  animation: Closed-animation 0.5s ease-in-out;
+  */
+  transition: 0.5s ease-in-out;
+  z-index: 1;
+}
+#About_Me h2 {
+  filter: brightness(120%);
+  transition: 2s;
+}
+.Terminal {
+  background-color: rgb(32, 32, 32);
+  width: 30%;
+  border-radius: 20px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 20px rgb(44, 171, 86);
+  animation: podswietlony_tekst 5s linear infinite;
+}
+.Overall-Experience {
+  display: flex;
+  justify-content: center;
+}
+.Experience1, .Experience2{
+  text-align: left;
+  margin: 0 2%;
+  margin-bottom: 5%;
+  background-color: rgb(32, 32, 32);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px rgb(44, 171, 86);
+}
+
+#Contact_Me {
+  text-align: center;
+  width: 80%;
+  margin: auto auto;
+  position: relative;
+  
+  transition: 0.50s ease-in-out;
+  z-index: 1;
+}
+.Contact {
+  display:inline-flex;
+  margin: 0 auto;
+  text-align: center;
+
+  font-size: 400%;
+}
+#Email{color: white;transition: 0.3s ease-in-out;}
+#Email:hover{color: rgb(255, 211, 157);}
+#Discord{color: white;transition: 0.3s ease-in-out;}
+#Discord:hover{color: blue;}
+
+
+#Programming{
+  transition: height 0.5s ease-in-out;
+}
+
+
+#Online_Shop{
+  text-align: center;
+  width: 90%;
+  margin: auto auto;
+  position: relative;
+  
+  transition: 0.5s ease-in-out;
+  z-index: 1;
+}
+#Online_Shop img {
+  text-align: center;
+  width: 100%;
+  background-color: rgb(42, 42, 42);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  transition: 0.5s;
+}
+#zakup {
+  padding: 20px;
+}
+#Pbutton {
+
+}
+
+
+#wyskakujace_zdjecie_TLO{
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.5;
+  display: flex;
+}
+#wyskakujace_zdjecie{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  font-size: 150px;
+}
+#wyskakujace_zdjecie_kontener{
+  position: relative;
+  display: inline-flex;
+  margin: auto auto;
+  height: 80%;
+}
+#wyskakujace_zdjecie_kontener label{
+  position: relative;
+  top: 40%;
+  margin: 0% auto;
+}
+#wyskakujace_zdjecie_kontener img{
+  background-color: rgb(42, 42, 42);
+}
+
+
+
+#Modelling {
+  text-align: center;
+  width: 90%;
+  margin: auto auto;
+  position: relative;
+  
+  transition: 0.5s ease-in-out;
+  z-index: 1;
+}
+#Rzad_zdjec {
+  margin: 3% auto;
+  text-align: center;
+  width: auto;
+  display: flex;
+  
+}
+#Modelling img {
+  text-align: center;
+  width: 100%;
+  background-color: rgb(42, 42, 42);
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  transition: 0.5s;
+}
+#Blok_zdjecia{
+  border-radius: 20px;
+  margin: auto 1%;
+  background-color: rgb(33, 105, 57);;
+  position: relative;
+  transition: 0.5s;
+}
+#Blok_zdjecia img:hover{
+  filter: brightness(125%);  
+}
+
+.zdjecie_profilowe{
+  margin: 20px auto;
+  border-radius: 50%;
+  width: 25%;
+  border: 5px double white;
+  animation: zdjecie_profilowe 3s ease-in-out infinite;
+  position: relative;
+  box-shadow: 0px 0px 50px 5px rgb(44, 171, 86);
+  
+  
+}
+@keyframes zdjecie_profilowe{
+  0%{top: 10px;}
+  50%{top: -15px;}
+  100%{top: 10px;}
+}
+
+@media (max-width:800px){
+  .zdjecie_profilowe {
+    width: 60%;
+  }
+  .przyciski {
+    display:flex;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .przycisk_About_me, .przycisk_Modelling, .przycisk_Contact_me,.przycisk_Programming,.przycisk_Online_Shop {
+    width: 40%;
+    margin: 1% 5%;
+  }
+  #Rzad_zdjec {
+    display: block;
+  }
+  #Blok_zdjecia {
+    margin: 5% 1%;
+    padding: 0.5px;
+  }
+  .Terminal {
+    width: auto;
+  }
+  .Overall-Experience {
+  display: block;
+  }
+  .Experience1, .Experience2{
+  text-align: left;
+  margin: 15% 2%;
+  background-color: rgb(32, 32, 32);
+  padding: 20px;
+  }
+  /* 🔧 Poprawki wyskakujących zdjęć poniżej */
+
+  #wyskakujace_zdjecie {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px; /* mniejsze X i strzałki */
+  }
+
+  #wyskakujace_zdjecie_kontener {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    max-height: 90vh;
+    width: 90vw;
+  }
+
+  #wyskakujace_zdjecie_kontener img {
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: contain;
+    background-color: white;
+    margin: 20px 0;
+  }
+
+  #wyskakujace_zdjecie_kontener label {
+    font-size: 40px;
+    top: unset;
+    margin: 10px;
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    padding: 10px 20px;
+  }
+
+  .Intro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  padding: 0;
+  display: block;
+  color: white;
+  text-align: center;
+  background-color: black;
+  font-size: 500%;
+  }
+
+  .Intro > p {
+    margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  }
+}
+
+
+.hidden {
+  opacity:0;
+}
+.console-underscore {
+   display:inline-block;
+  position:relative;
+  top:-0.14em;
+  left:10px;
+}
+
+
+
+#c {
+    position: fixed;   /* zawsze przyklejony do okna */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;       /* za całą treścią */
+    margin: 0;
+    padding: 0;
+    display: block;
+    pointer-events: none; /* żeby nie blokował kliknięć */
+  }

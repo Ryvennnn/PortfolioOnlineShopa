@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryven Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">   
+</head>
+<body bgcolor="Black">
+
+    
+
+   <canvas id="c"></canvas>
+
+   <div id="Intro" class="Intro"><p>ryven__</p></div>
+
+    <div id="calosc" class="calosc">
+        <div class="tlo">
+            <div class="przyciski">
+
+                <div id="przycisk_About_me" class="przycisk_About_me" onclick="zmiana_zakladki(zakladka_About_me)">
+                    <p><b>About me</b></p>
+                </div>
+                <div id="przycisk_Modelling" class="przycisk_Modelling" onclick="zmiana_zakladki(zakladka_Modelling)">
+                    <p><b>Modelling</b></p>
+                </div>
+                <div id="przycisk_Programming" class="przycisk_Programming" onclick="zmiana_zakladki(zakladka_Programming)">
+                    <p><b>Scripting</b></p>
+                </div>
+                <div id="przycisk_Online_Shop" class="przycisk_Online_Shop" onclick="zmiana_zakladki(zakladka_Online_Shop)">
+                    <p><b>Online Shop</b></p>
+                </div>
+                <div id="przycisk_Contact_me" class="przycisk_Contact_me" onclick="zmiana_zakladki(zakladka_Contact_me)">
+                    <p><b>Contact me</b></p>
+                </div>
+            
+            </div>
+        </div>
+        <hr>
+
+        <div id="About_Me" style="display: block;">
+            
+                <h1>Ryven</h1>
+                <div class="Terminal">
+                <h2 style="color: rgb(44, 171, 86);" class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></h2>
+                </div>
+                <br>
+                <h3>Hi, I'm a 18 years old dedicated programmer and 3D modeler. I prioritize high quality as much as fast delivery of commissions.</h3>
+                <br>
+                <div class="Overall-Experience">
+                        <div class="Experience1">
+
+                        <h3><i>3D Modeling Skills: </i></h3>
+                            <b>Experience:</b>
+                            <ul>  <li>Modelling - 3 years</li>
+                            <li>Sculpting - 2 years</li>
+                            </ul>
+                            <b>Software:</b>
+                            <ul>
+                                <li>Blender</li>
+                                <li>Zbrush</li>
+                                <li>Adobe Substance 3D Painter</li>
+                            </ul>
+                            <b>Additional Tools:</b>
+                            <ul>
+                                <li>Pen tablet for enhanced precision and quality</li>
+                            </ul>
+
+                        </div>
+
+
+                        <div class="Experience2">
+                            
+                        <h3><i>Programming skills: </i></h3>
+                            <b>Experience:</b>
+                            <ul>
+                                <li>Frontend <b>(HTML,CSS,JavaScript)</b> - 2 years</li>
+                                <li>Backend <b>(PHP,MYSQL)</b> - 2 years</li>
+                                <li>Roblox Studio's Lua - 1 year</li>
+                            </ul>
+                            <b>Previous Experience:</b>
+                            <ul>
+                                <li>Node.js</li>
+                                <li>Discord.js</li>
+                                <li>React.js</li>
+                            </ul>
+                        </div>
+                        <br><br>
+                    
+                    
+                        
+                </div>
+        </div>
+
+
+        <div id="wyskakujace_zdjecie">
+            <div id="wyskakujace_zdjecie_TLO"></div>
+            <div id="wyskakujace_zdjecie_kontener"></div>
+        </div>
+
+        <div id="Modelling" style="display: none;">
+            
+            <h2>Sculptures</h2>
+
+            <div id="Rzad_zdjec">
+                
+
+                <div id="Blok_zdjecia" onclick="zdjecie_popup('Zdjecia/Sans/Sansportret1.png','Zdjecia/Sans/Sans2.png')">
+                    <img src="Zdjecia/Sans/Sansportret1.png">
+                    <div>
+                        <p>Sans from the Undertale</p>
+                    </div>
+                </div>
+
+                <div id="Blok_zdjecia" onclick="zdjecie_popup('Zdjecia/Turtle/Turtolo.png')">
+                    <img src="Zdjecia/Turtle/Turtolo.png">
+                    <div>
+                        <p>Cartoon Turtle</p>
+                    </div>
+                </div>
+            </div>    
+
+
+
+            <h2>Sculptures</h2>
+
+            <div id="Rzad_zdjec">
+                
+                <div id="Blok_zdjecia" onclick="zdjecie_popup('Zdjecia/Alien/Alien.png','Zdjecia/Alien/Alien2.png','Zdjecia/Alien/Alien3.png','Zdjecia/Alien/Alien5.png')">
+                    <img src="Zdjecia/Alien/Alien.png">
+                    <div>
+                        <p>The Sculpturd Torso of Alien from the Alien series</p>
+                    </div>
+                </div>
+                
+                <div id="Blok_zdjecia" onclick="zdjecie_popup('Zdjecia/Kaczka/Kaczka.png','Zdjecia/Kaczka/Kaczka1.png','Zdjecia/Kaczka/Kaczka3.png')">
+                    <img src="Zdjecia/Kaczka/Kaczka.png">
+                    <div>
+                        <p>Just a <b>DUCK</b></p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <hr><h2>Armor Models</h2>
+
+            <div id="Rzad_zdjec">
+                
+                <div id="Blok_zdjecia" onclick="zdjecie_popup('Zdjecia/HalfLifeHelmet/HLhelmet.png','Zdjecia/HalfLifeHelmet/HLhelmet2.png','Zdjecia/HalfLifeHelmet/HLhelmet3.png')">
+                    <img src="Zdjecia/HalfLifeHelmet/HLhelmet.png">
+                    <div>
+                        <p>Half Life series Helmet</p>
+                    </div>
+                </div>
+          
+            </div>
+
+
+            
+
+            <hr><h2>Other Projects</h2>
+
+            <div id="Rzad_zdjec">
+                
+                <div id="Blok_zdjecia" onclick="zdjecie_popup('Zdjecia/MiningCart/Cart1.png','Zdjecia/MiningCart/Cart2.png','Zdjecia/MiningCart/Cart3.png','Zdjecia/MiningCart/Cart4.png')">
+                    <img src="Zdjecia/MiningCart/Cart1.png">
+                    <div>
+                        <p>Cart.<label style="font-size: small;"> Yeah thats it.</label></p>
+                    </div>
+                </div>
+
+                <div id="Blok_zdjecia" onclick="zdjecie_popup('Zdjecia/CommunicatorSTARWARS/Com.png','Zdjecia/CommunicatorSTARWARS/Communicatormetalic.png','Zdjecia/CommunicatorSTARWARS/Communicator.png','Zdjecia/CommunicatorSTARWARS/Comunicator.png')">
+                    <img src="Zdjecia/CommunicatorSTARWARS/Com.png">
+                    <div>
+                        <p>Hologram communicator from Star Wars</p>
+                    </div>
+                </div>
+
+                <div id="Blok_zdjecia" onclick="zdjecie_popup('Zdjecia/Tree/Trees2.png')">
+                    <img src="Zdjecia/Tree/Trees2.png">
+                    <div>
+                        <p>Realistic Tree</p>
+                    </div>
+                </div>
+          
+            </div>
+
+        </div>
+
+        <div id="Programming" style="display: none;">
+
+                <h1>W.I.P</h1>
+                <p>Soon my works will be added here</p>
+
+            </div>
+
+
+
+        <div id="Contact_Me" style="display: none;">
+            <img class="zdjecie_profilowe" src="TOM.jpg" alt="profile pricture">
+            <h2>If you have any questions, please contact me. I will answer as soon as possible!</h2>
+            <p>Contact info: </p>
+
+                <div class="Contact"> 
+                    <a id="Email" href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRtsnQzmzlpwSTRrWTQrkHrfMMkwSNbLdctmCgcxGtkNJjwxSDWzkVFHLbPfWhZrvtvTVXV" target="_blank" ><i class="fa-solid fa-envelope"></i></a></label> <br>
+                    <label>&nbsp;</label>
+                    <a id="Discord" href="https://discord.com/users/310136083847577602" target="_blank"><i class="fa-brands fa-discord fa-bounce"></i></a> </label> <Br>
+                </div>
+
+                <br><br>
+        </div>
+
+
+
+        <div id="Online_Shop" style="display: none;">
+            
+            <h2><s>Heyo Wanna buy me?</s></h2>
+            <h3>[Dont buy anything its just for some little funky hunky tests]</h3>
+
+            
+            
+             <div id="Rzad_zdjec">
+                
+                <div id="Blok_zdjecia" onclick="zdjecie_popup('Zdjecia/HalfLifeHelmet/HLhelmet.png','Zdjecia/HalfLifeHelmet/HLhelmet2.png','Zdjecia/HalfLifeHelmet/HLhelmet3.png')">
+                    <img src="Zdjecia/HalfLifeHelmet/HLhelmet.png">
+                    <div id="zakup">
+                        
+
+                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                <label>Half Life series Helmet</label>
+                                <input type="hidden" name="cmd" value="_s-xclick" />
+                                <input type="hidden" name="hosted_button_id" value="KBYE6KT3DGHT8" />
+                                <input type="hidden" name="currency_code" value="USD" />
+                                <input id="Pbutton" type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_SM.gif" border="0" name="submit" title="PayPal –wygodne i bezpieczne płatności za zakupy w Internecie." alt="Kup teraz" />
+
+                            </form>
+
+                    </div>
+                </div>
+          
+            </div>
+            
+        </div>
+    
+            
+    </div>
+
+     
+</body>
+<script src="index.js"></script>
+
+
+</html>
